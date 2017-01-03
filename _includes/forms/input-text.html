@@ -1,0 +1,4 @@
+<div class="form-group">
+  <label for="{{ include.name }}">{{ include.title }} {% if include.required %}<span style="color:red">*</span>{% endif %}</label>
+  <input type="text" class="form-control" placeholder="Enter {{ include.title }}" name="position" {% if include.id %}id="{{ include.id }}"{% endif %} {% if include.required %}required{% endif %}>
+</div>

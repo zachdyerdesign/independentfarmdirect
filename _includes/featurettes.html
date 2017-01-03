@@ -1,0 +1,24 @@
+<!-- START THE FEATURETTES -->
+
+{% for page in site.pages %}
+{% if page.url != "/" and page.url != "/feed.xml" %}
+<hr class="featurette-divider">
+
+<div class="row featurette">
+  <div class="col-md-7{% cycle '', ' col-md-push-5' %}">
+    <h2 class="featurette-heading">{{ page.title }}</h2>
+    <p class="lead">{{ page.desc }}</p>
+    <p><a class="btn btn-primary btn-lg" href="{{ site.github.url }}{{ page.url }}" role="button">Learn More »</a></p>
+  </div>
+  <div class="col-md-5{% cycle '', ' col-md-pull-7' %}">
+    <a href="{{ site.github.url }}{{ page.url }}">
+      <img class="featurette-image img-responsive center-block" alt="{{ page.title }}" src="{{ site.github.url }}{{ page.img }}">
+    </a>
+  </div>
+</div>
+{% endif %}
+{% endfor %}
+
+<hr class="featurette-divider">
+
+<!-- /END THE FEATURETTES -->

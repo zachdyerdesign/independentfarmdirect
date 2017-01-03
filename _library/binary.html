@@ -1,0 +1,61 @@
+---
+title: Binary library
+layout: page
+desc: Tools for converting binary numbers to whole numbers
+img: /img/binary.png
+scripts:
+- zachdyerdesign/binary.js
+- zachdyerdesign/string.js
+---
+
+
+{% include alerts/alert-info.html message="Enter a binary number" id="alert-panel" %}
+<div class="row">
+  <div class="col-md-6">
+    {% include forms/input-text.html title="Binary Number" id="binary-input" %}
+  </div>
+  <div class="col-md-6">
+    {% include panel.html title="Whole Number" id="whole-number" %}
+  </div>
+</div>
+
+<h3>Documentation</h3>
+<div class="row">
+  <div class="col-md-6">
+    <h4>Binary convert()</h4>
+    <p>To use on a page in the yaml page settings add scripts: and zachdyerdesign/binary.js and zachdyerdesign.string.js. Pass a binary value into the function and it returns a whole number value. If any other value is passed in it returns false.</p>
+    {% highlight js linenos%}
+    zachdyerdesign.binary.convert(101);
+    // returns 5
+    {% endhighlight %}
+  </div>
+  <div class="col-md-6">
+
+  </div>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+  var
+    binaryInput = document.getElementById('binary-input'),
+    wholeNumber = document.getElementById('whole-number'),
+    alertBox = document.getElementById('alert-box');
+
+  binaryInput.addEventListener("input", function() {
+    if(zachdyerdesign.binary.convert(binaryInput.value)) {
+      alertBox.setAttribute('class', "alert alert-info");
+      alertBox.innerHTML = "Enter a binary number";
+      wholeNumber.innerHTML = zachdyerdesign.binary.convert(binaryInput.value);
+    } else {
+      alertBox.setAttribute('class', "alert alert-danger");
+      alertBox.innerHTML = "You can only enter 0's or 1's!";
+      wholeNumber.innerHTML = "Invalid binary number";
+    }
+
+  });
+
+
+</script>

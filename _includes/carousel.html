@@ -1,0 +1,35 @@
+<!-- Carousel
+================================================== -->
+{% if site.data.settings.nav == "fixed" %}<div class="container">{% endif %}
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      {% for slide in site.data.carousel %}
+      <li data-target="#myCarousel" data-slide-to="{{ forloop.index0 }}" class="{% if forloop.index0 == 0 %}active{% endif %}"></li>
+      {% endfor %}
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      {% for slide in site.data.carousel %}
+      <div class="item{% if forloop.index0 == 0 %} active{% endif %}">
+        <img class="slide{{ forloop.index0 }}" src="{{ slide.img }}" alt="{{ slide.title }}">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>{{ slide.title }}</h1>
+            <p>{{ slide.desc }}</p>
+            <p><a class="btn btn-lg btn-primary" href="{{ site.github.url}}{{ slide.link }}" role="button" target="{{slide.target}}">{{ slide.button }}</a></p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <a class="left carousel-control" href="{{ site.github.url}}/#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="{{ site.github.url}}/#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+{% if site.data.settings.nav == "fixed" %}</div>{% endif %}
+<!-- /.carousel -->

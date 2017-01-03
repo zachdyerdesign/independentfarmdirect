@@ -1,0 +1,36 @@
+<nav class="navbar navbar-inverse navbar-{{ site.data.settings.nav }}-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{{ site.github.url}}/"><span class="glyphicon glyphicon-{{ site.data.settings.logo }}" aria-hidden="true"></span> {{ site.title }}</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li{% if page.url == "/" %} class="active"{% endif %}><a href="{{ site.github.url}}/">Home</a></li>
+        {% assign sorted_pages = site.pages | sort:"order" %}
+        {% for menu in sorted_pages %}
+        {% if menu.url != "/feed.xml" and menu.url != "/" %}
+        <li{% if page.url == menu.url %} class="active"{% endif %}><a href="{{ site.github.url}}{{ menu.url }}">{{ menu.menu }}</a></li>
+        {% endif %}
+        {% endfor %}
+        <!-- <li class="dropdown">
+          <a href="{{ site.github.url}}/#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="{{ site.github.url}}/#">Action</a></li>
+            <li><a href="{{ site.github.url}}/#">Another action</a></li>
+            <li><a href="{{ site.github.url}}/#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li class="dropdown-header">Nav header</li>
+            <li><a href="{{ site.github.url}}/#">Separated link</a></li>
+            <li><a href="{{ site.github.url}}/#">One more separated link</a></li>
+          </ul>
+        </li> -->
+      </ul>
+    </div>
+  </div>
+</nav>

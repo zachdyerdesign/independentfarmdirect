@@ -1,0 +1,17 @@
+- title: StarBorn
+  desc: StarBorn is a infinite space game in alpha.
+  img: /img/starborn.jpg
+  url: https://github.com/zachdyer/starborn
+  button: Learn more »
+
+- title: Sun Effect
+  desc: Sun animation I created for space trucking
+  img: /img/sun-effect.jpg
+  url: /sun-effect
+  button: Learn more »
+
+- title: Flower of Life
+  desc: An animation of the flower of life in alpha stage lol.
+  img: /img/flower-of-life.jpg
+  url: /flower-of-life
+  button: Learn more »

@@ -1,0 +1,29 @@
+.chat {
+  position: absolute;
+  background-color: #eee;
+  bottom: 0;
+  right: 50px;
+}
+
+.chat > .tab {
+  background-color: #ccc;
+  height: 30px;
+  cursor: pointer;
+}
+
+.chat > .input {
+  position: absolute;
+  bottom: 0px;
+}
+
+.chat > .output {
+  margin-left: 10px;
+  height: 220px;
+  overflow-y: scroll;
+}
+
+.chat > .output > .response {
+  text-align: right;
+  display: block;
+  white-space: normal;
+}

@@ -1,0 +1,4 @@
+logo: console
+slider: true
+shoutout: true
+nav: fixed # fixed sticks to the top of the page and static is contained in a wrapper 

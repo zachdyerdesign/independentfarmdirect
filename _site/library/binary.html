@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="Tools for converting binary numbers to whole numbers">
+  <meta name="author" content="Zach Dyer Design">
+
+  <link rel="icon" href="/img/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/img/manifest.json">
+<link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="theme-color" content="#ffffff">
+
+
+  <title>Binary library - Zach Dyer</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/syntax.css" rel="stylesheet">
+
+  
+  <link href="/css/theme.css" rel="stylesheet">
+  
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Custom styles for this template -->
+  <link href="/css/carousel.css" rel="stylesheet">
+  
+
+  <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+<script src="/js/holder.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="/js/ie10-viewport-bug-workaround.js"></script>
+
+
+  
+  
+  <script type="text/javascript" src="/js/zachdyerdesign/binary.js"></script>
+  
+  <script type="text/javascript" src="/js/zachdyerdesign/string.js"></script>
+  
+  
+
+</head>
+
+
+  <body>
+
+    
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-console" aria-hidden="true"></span> Zach Dyer</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/">Home</a></li>
+        
+        
+        
+        <li><a href="/libraries.html">Library</a></li>
+        
+        
+        
+        <li><a href="/blog.html">Blog</a></li>
+        
+        
+        
+        
+        
+        
+        
+        <li><a href="/about.html">About</a></li>
+        
+        
+        
+        <li><a href="/cheatsheet.html">Cheatsheet</a></li>
+        
+        
+        <!-- <li class="dropdown">
+          <a href="/#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/#">Action</a></li>
+            <li><a href="/#">Another action</a></li>
+            <li><a href="/#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li class="dropdown-header">Nav header</li>
+            <li><a href="/#">Separated link</a></li>
+            <li><a href="/#">One more separated link</a></li>
+          </ul>
+        </li> -->
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+    <div class="container marketing">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <h1>Binary library</h1>
+        <p>Tools for converting binary numbers to whole numbers</p>
+      </div>
+
+      <div class="alert alert-info" role="alert" id="alert-box">
+  Enter a binary number
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group">
+  <label for="">Binary Number </label>
+  <input type="text" class="form-control" placeholder="Enter Binary Number" name="position" id="binary-input" >
+</div>
+
+  </div>
+  <div class="col-md-6">
+    <div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Whole Number</h3>
+  </div>
+  <div class="panel-body" id="whole-number">
+    
+  </div>
+</div>
+
+  </div>
+</div>
+
+<h3>Documentation</h3>
+<div class="row">
+  <div class="col-md-6">
+    <h4>Binary convert()</h4>
+    <p>To use on a page in the yaml page settings add scripts: and zachdyerdesign/binary.js and zachdyerdesign.string.js. Pass a binary value into the function and it returns a whole number value. If any other value is passed in it returns false.</p>
+    <figure class="highlight"><pre><code class="language-js" data-lang="js"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3</pre></td><td class="code"><pre>    <span class="nx">zachdyerdesign</span><span class="p">.</span><span class="nx">binary</span><span class="p">.</span><span class="nx">convert</span><span class="p">(</span><span class="mi">101</span><span class="p">);</span>
+    <span class="c1">// returns 5</span>
+    <span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+  </div>
+  <div class="col-md-6">
+
+  </div>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+  var
+    binaryInput = document.getElementById('binary-input'),
+    wholeNumber = document.getElementById('whole-number'),
+    alertBox = document.getElementById('alert-box');
+
+  binaryInput.addEventListener("input", function() {
+    if(zachdyerdesign.binary.convert(binaryInput.value)) {
+      alertBox.setAttribute('class', "alert alert-info");
+      alertBox.innerHTML = "Enter a binary number";
+      wholeNumber.innerHTML = zachdyerdesign.binary.convert(binaryInput.value);
+    } else {
+      alertBox.setAttribute('class', "alert alert-danger");
+      alertBox.innerHTML = "You can only enter 0's or 1's!";
+      wholeNumber.innerHTML = "Invalid binary number";
+    }
+
+  });
+
+
+</script>
+
+
+      <!-- FOOTER -->
+<hr class="featurette-divider">
+<footer>
+  <p class="pull-right"><a href="/#">Back to top</a></p>
+  <p>© 2016 Zach Dyer | Created by <a href="http://zachdyerdesign.com" target="_blank">Zach Dyer Design</a></p>
+</footer>
+
+
+    </div><!-- /.container -->
+
+  </body>
+</html>

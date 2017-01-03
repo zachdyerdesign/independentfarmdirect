@@ -1,0 +1,20 @@
+- title: Chrome Rogue
+  desc: A topdown roguelike game! This game is in active development.
+  img: /img/chrome-rogue.jpg
+  link: https://github.com/zachdyer/chrome-rogue/
+  target: _blank
+  button: Learn More
+
+- title: Spaceship
+  desc: This is a HTML5 spaceship game. Use the mouse to move the ship around and left click to shoot UFOs.
+  img: /img/spaceship2.jpg
+  link: https://github.com/zachdyer/spaceship/
+  target: _blank
+  button: Learn more
+
+- title: Pong
+  desc: This is an HTML5 game that is like pong except single player. The longer you bounce the ball the higher your score will be. See if you can hack the game to get a killer score.
+  img: /img/pong.jpg
+  link: https://github.com/zachdyer/pong
+  target: _blank
+  button: Learn More

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <div class="container marketing">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <h1>{{ page.title }}</h1>
+        <p>{{ page.desc }}</p>
+      </div>
+
+      {{ content }}
+
+      {% include footer.html %}
+
+    </div><!-- /.container -->
+
+  </body>
+</html>
