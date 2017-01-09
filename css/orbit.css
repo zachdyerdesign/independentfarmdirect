@@ -64,7 +64,7 @@ div.slider-nav span.right, div.slider-nav span.left,  div.slider-nav span.right 
 
 .orbit-wrapper div.slider-nav span.right {
 	background-color: #27CFC3;
-    background-image: url(../img/icons/slider-arrows.png);
+    background-image: url(../img/slider-arrows.png);
     right: 0px;
     background-position: right top;
 }
@@ -75,7 +75,7 @@ body[data-smooth-scrolling="1"] .orbit-wrapper div.slider-nav span.right {
 
 .orbit-wrapper div.slider-nav span.left {
 	background-color: #27CFC3;
-    background-image: url(../img/icons/slider-arrows.png);
+    background-image: url(../img/slider-arrows.png);
     left: 0px;
     background-position: left top;
 }
@@ -85,7 +85,7 @@ div.slider-nav span.right span.white {
 	top: 35px;
     right: 0px;
     position: absolute;
-    background: url(../img/icons/slider-arrows.png);
+    background: url(../img/slider-arrows.png);
     background-position: right bottom;
 }
 
@@ -94,7 +94,7 @@ div.slider-nav span.left span.white {
 	top: 35px;
     right: 0px;
     position: absolute;
-    background: url(../img/icons/slider-arrows.png);
+    background: url(../img/slider-arrows.png);
     background-position: left bottom;
 }
 
@@ -108,7 +108,7 @@ only screen and (min-resolution: 144dpi) {
    		background-size: 140px 133px!important;
    		-webkit-background-size: 140px 133px!important;
    		-moz-background-size: 140px 133px!important;
-      	background-image: url(../img/icons/slider-arrows@2x.png)!important;
+      	background-image: url(../img/slider-arrows@2x.png)!important;
    }
 }
 
@@ -124,7 +124,7 @@ div.slider-nav span span.shadow {
     height: 7px;
     position: absolute;
     width: 56px;
-    background: url(../img/icons/slider-arrows-shadows.png);
+    background: url(../img/slider-arrows-shadows.png);
 }
 
 div.slider-nav span.left span.shadow { background-position: left bottom; }
@@ -317,7 +317,7 @@ div.slider-nav span.right span.shadow { background-position: right bottom; }
 	position: relative;
 	z-index: 1;
 	height: 650px!important;
-	background: #000 url('../img/icons/loading.gif') no-repeat center center;
+	background: #000 url('../img/loading.gif') no-repeat center center;
 	overflow: hidden; }
 #featured>img,
 #featured>div,
